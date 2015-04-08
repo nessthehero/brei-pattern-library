@@ -1,0 +1,37 @@
+.accordion {
+
+	.js & { // Accordions don't work without JS so only activate when JS is available.
+
+		h2 {
+
+			&:after {
+				/* For Plus/Minus icon */
+			}
+		}
+
+		.content {
+			display: none;
+		}
+
+		&.open {
+
+			h2 {
+
+				&:after {
+					/* For Plus/Minus icon */
+				}
+			}
+
+			.content {
+				display: block;
+			}
+
+		}
+
+		& + .accordion {
+			margin-top: -5px; /* Crunches closed accordions together */
+		}
+
+	}
+
+}
